@@ -59,7 +59,7 @@ var classFull = prompt("Is class full");
 
 var studentSchedule = prompt("Does class conflict with current schedule?");
 
-var canEnroll = (classFull && studentSchedule) == "no";
+var canEnroll = (classFull && studentSchedule) === "no";
 
 alert("Can student enroll? " + canEnroll);
 
@@ -75,6 +75,6 @@ var expired = prompt("Is offer expired?");
 
 var premiumMember = prompt("Is person a Premium Member?");
 
-var canApply = ((numberOfItems > 2) && (expired = "no")) || ((expired = "no") && (premiumMember = "yes"));
+var canApply = ((numberOfItems > 2) && (expired === "no")) || ((expired === "no") && (premiumMember === "yes"));
 
 alert("Can Offer be applied? " + canApply);
