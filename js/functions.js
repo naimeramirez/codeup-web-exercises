@@ -130,20 +130,20 @@ var userPercentage = userPercentageInput.toFixed(2);
 function applyDiscount(price, discount){
 
     var priceConvert = Number(price);
-    var discountConvert = Number("0." + discount);
-    var discountDecimal = discountConvert.toFixed(2);
+    var discountConvert = Number(discount);
+    var discountDecimal = discountConvert / 100;
     var discountAmount = priceConvert * discountDecimal;
     return priceConvert - discountAmount;
 }
 
-    console.log(applyDiscount("100", ".2"));
-    console.log(applyDiscount("45.99", ".12"));
+    console.log(applyDiscount("100", "20"));
+    console.log(applyDiscount("45.99", "12"));
 
 var userPrice = prompt("What is the price?");
 var userDiscountInput =prompt("Discount Percentage");
 
     console.log("Original Price $" + userPrice);
     console.log("Discount = " + userDiscountInput + "%");
-    console.log("Price after Discount: " + applyDiscount(userPrice, userDiscountInput));
+    console.log("Price after Discount: $" + applyDiscount(userPrice, userDiscountInput));
 
 })();
