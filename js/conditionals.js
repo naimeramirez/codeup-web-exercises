@@ -226,42 +226,42 @@
 
 var confirmNumber = confirm("Would you like to enter a number?");
 
-if (confirmNumber === true) {
+    if (confirmNumber === true) {
 
-    var userNumber = Number(prompt("Enter a number"));
+        var userNumber = Number(prompt("Enter a number"));
 
-        if (isNaN(userNumber)){
-                alert("That is not a number");
+        if (isNaN(userNumber)) {
+            alert("That is not a number");
         } else {
 
-            ///whether the number is even or odd
-            function evenOrOdd(num){
+            //creating function for whether the number is even or odd
+            function evenOrOdd(num) {
                 if (num === 0) {
                     alert(userNumber + " is not even or odd");
-                } else if (num % 2 === 0){
+                } else if (num % 2 === 0) {
                     alert(userNumber + " is an even number");
                 } else {
                     alert(userNumber + " is an odd number");
                 }
 
             }
-
+            //calling the function
             evenOrOdd(userNumber);
 
             // what the number plus 100 is
             alert(userNumber + " + 100 = " + (userNumber + 100));
 
             //if the number is negative or positive
-            if (userNumber < 0 ) {
+            if (userNumber < 0) {
                 alert(userNumber + " is a negative number");
             } else if (userNumber > 0) {
                 alert(userNumber + " is a positive number");
             } else {
-                    alert(userNumber + " is not negative or positive");
+                alert(userNumber + " is not negative or positive");
             }
         }
-}else
-    alert("action cancelled");
+    } else
+        alert("action cancelled");
 
 
 })()
