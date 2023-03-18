@@ -61,7 +61,7 @@ function second(array) {
 }
 
 function last(array) {
-    return array[(array.length - 1)];
+    return array[array.length - 1];
 }
 
 console.log(first(numbers));
