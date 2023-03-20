@@ -1,6 +1,56 @@
 (function() {
     "use strict";
 
+// Class notes
+
+// var waterBottle = {
+//     color: 'blue',
+//     size: '16 oz',
+//     type: 'cup',
+//     hasStraw: true,
+//     hasLid: true,
+//     material: 'stainless steel'
+// };
+//
+//     console.log(waterBottle);
+//
+// // "My water bottle is: " color "
+//     console.log("my water bottle is: " + waterBottle.color);
+//
+//
+//     var cars = [
+//         {
+//             make: "Toyota",
+//             model: "Camry",
+//             features: ["Automatic Windows", "Bluetooth Connectivity", "GPS Navigation"],
+//             owner: {
+//                 name: "Jane Doe",
+//                 age: 30
+//             }
+//         },
+//         {
+//             make: "Honda",
+//             model: "Accord",
+//             features: ["Automatic Windows", "Great Gas Mileage", "AM/FM Radio"],
+//             owner: {
+//                 name: "John Doe",
+//                 age: 31
+//             }
+//         }
+//     ];
+//
+//     console.log("The first car is a " + cars[0].make + " " + cars[0].model + ".");
+//     console.log("The owner of the second car is " + cars[1].owner.name + ".");
+//
+//     console.log("Here are all the features of all the cars:");
+//     cars.forEach(function(car) {
+//         car.features.forEach(function(feature) {
+//             console.log(feature);
+//         });
+//     });
+
+//
+
     /**
      * TODO:
      * Create an object with firstName and lastName properties that are strings
@@ -18,6 +68,7 @@ var person = {
     };
     console.log(person.firstName);
     console.log(person.lastName);
+    console.log(person);
 
     /**
      * TODO:
@@ -28,9 +79,11 @@ var person = {
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    function sayHello (name) {
+        return ("Hello, " + name);
+    }
 
-
-
+    console.log(sayHello(person.firstName));
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
