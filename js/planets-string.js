@@ -27,18 +27,18 @@ var planetsArray = planetsString.split(",");
 var planetsBR = planetsArray.join("<br>");
     console.log(planetsBR);
 
-var list = listElement('' +
-    '        <ul>\n' +
-    '            <li>Mercury</li>\n' +
-    '            <li>Venus</li>\n' +
-    '            <li>Earth</li>\n' +
-    '            <li>Mars</li>\n' +
-    '            <li>Jupiter</li>\n' +
-    '            <li>Saturn</li>\n' +
-    '            <li>Uranus</li>\n' +
-    '            <li>Neptune</li>\n' +
-    '        </ul>'
-);
-    console.log(listElement);
+// var list = listElement('' +
+//     '        <ul>\n' +
+//     '            <li>Mercury</li>\n' +
+//     '            <li>Venus</li>\n' +
+//     '            <li>Earth</li>\n' +
+//     '            <li>Mars</li>\n' +
+//     '            <li>Jupiter</li>\n' +
+//     '            <li>Saturn</li>\n' +
+//     '            <li>Uranus</li>\n' +
+//     '            <li>Neptune</li>\n' +
+//     '        </ul>'
+// );
+//     console.log(listElement);
 
 })();
