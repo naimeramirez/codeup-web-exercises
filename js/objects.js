@@ -79,11 +79,8 @@ var person = {
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    function sayHello (name) {
-        return ("Hello, " + name);
-    }
 
-    console.log(sayHello(person.firstName));
+    console.log("Hello, " + person.firstName + " " + person.lastName);
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -99,11 +96,22 @@ var person = {
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    // console.log(shoppers[0].name);
+    // console.log(shoppers[0].amount);
+
+    shoppers.forEach(function (shopObj){
+        if (shopObj.amount < 250){
+            console.log(shopObj.name + " $" + shopObj.amount + " Discount: $0, Your total is $" + shopObj.amount);
+        } else {
+            var discountPrice = shopObj.amount * .12;
+            console.log(shopObj.name + " $" + shopObj.amount + " Discount: $" + discountPrice + ", Your total is $" + (shopObj.amount - discountPrice));
+        }
+    })
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -117,6 +125,50 @@ var person = {
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            title: "Swim Team",
+            author:{
+                firstName: "Johnnie",
+                lastName: "Christmas"
+            }
+        },
+        {
+            title: "Nell Plants a Tree",
+            author:{
+                firstName: "Anne",
+                lastName: "Wynter"
+            }
+        },
+        {
+            title: "The Swifts",
+            author:{
+                firstName: "Beth",
+                lastName: "Lincoln"
+            }
+        },
+        {
+            title: "Invisible: A Graphic Novel",
+            author:{
+                firstName: "Christina",
+                lastName: "Diaz"
+            }
+        },
+        {
+            title: "A Spoonful of Frogs",
+            author:{
+                firstName: "Casey",
+                lastName: "Lyall"
+            }
+        }
+    ];
+
+    // console.log(books[4].title);
+    // console.log(books[2].author.firstName);
+    // console.log(books[0].author.lastName);
+
+    // console.log(books.indexOf(books.title))
 
     /**
      * TODO:
@@ -142,6 +194,16 @@ var person = {
      *      ---
      *      ...
      */
+
+    // - the book number (use the index of the book in the array)
+    // - the book title
+    // - author's full name (first name + last name)
+
+    books.forEach(function (booksObj) {
+        console.log("Book #");
+        console.log("Title: " + booksObj.title);
+        console.log("Author: " + booksObj.author.firstName + " " + booksObj.author.lastName);
+    })
 
     /**
      * Bonus:
