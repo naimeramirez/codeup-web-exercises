@@ -195,15 +195,11 @@ var person = {
      *      ...
      */
 
-    // - the book number (use the index of the book in the array)
-    // - the book title
-    // - author's full name (first name + last name)
-
-    books.forEach(function (booksObj) {
-        console.log("Book #");
-        console.log("Title: " + booksObj.title);
-        console.log("Author: " + booksObj.author.firstName + " " + booksObj.author.lastName);
-    })
+    for (var i = 0; i < books.length; i++) {
+        console.log("Book #" + (i + 1));
+        console.log("Title: " + books[i].title);
+        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+    }
 
     /**
      * Bonus:
@@ -215,5 +211,9 @@ var person = {
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(){
+
+    }
 
 })();
