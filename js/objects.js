@@ -195,12 +195,12 @@ var person = {
      *      ...
      */
 
-    for (var i = 0; i < books.length; i++) {
-        console.log("Book #" + (i + 1));
-        console.log("Title: " + books[i].title);
-        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
-        console.log("---");
-    }
+    // for (var i = 0; i < books.length; i++) {
+    //     console.log("Book #" + (i + 1));
+    //     console.log("Title: " + books[i].title);
+    //     console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+    //     console.log("---");
+    // }
 
     /**
      * Bonus:
@@ -225,7 +225,7 @@ var person = {
     books.push(createBook("Julia and the Shark", "Kiran", "Hargrave"));
 
     var showBookInfo = function (book, i){
-        console.log("Book #" + (i + 1));
+        console.log("Book # " + (i + 1));
         console.log("Title: " + books[i].title);
         console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
         console.log("---");
