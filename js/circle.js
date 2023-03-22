@@ -14,12 +14,12 @@
 
         logInfo: function (doRounding) {
             // TODO: complete this method.
-            if (doRounding === true) {
-                console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(this.getArea(this.radius)));
+            if (doRounding) {
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(this.getArea()));
             } else {
                 // If doRounding is true, round the result to the nearest integer.
                 // Otherwise, output the complete value
-                console.log("Area of a circle with radius: " + this.radius + ", is: " + this.getArea(this.radius));
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + this.getArea());
             }
         }
     };
@@ -36,7 +36,7 @@
 //     circle.radius = x;
 // }
 // changeRadius(5);
-    circle['radius'] = 5;
+    circle.radius = 5;
 
     // log info about the circle
     console.log("Raw circle information");
