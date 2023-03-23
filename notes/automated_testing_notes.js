@@ -29,4 +29,35 @@ describe('Unit Tests for the dtringLength function', function () {
         expect(stringLength(18)).toBe(null);
     });
 
+
+    function isString(input){
+        return typeof input == "string"
+    }
+    function isNotString(input){
+        return typeof input != "string"
+    }
+
+    function isEmptyString(input) {
+        return input === ""
+    }
+
+    function isNegative(input){
+        return input < 0;
+    }
+
+    function isNotANumber(input){
+        return typeof input != "number"
+    }
+
+    function isArray(input){
+        return array.isArray(input);
+    }
+
+    function upperCase(input){
+        if(isNotString(input))
+        return false
+    }else{
+        return input.toUpperCase()
+    }
+
 });
