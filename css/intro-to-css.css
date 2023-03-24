@@ -1,0 +1,32 @@
+
+
+.fancy-header {
+    color: green;
+}
+
+.section-header {
+    color: red;
+}
+
+.button-text {
+    font-size: 24px;
+    border-radius: 12px;
+}
+
+.dotted-border {
+    border-color: blue;
+    border-style: dotted;
+}
+
+.yellow-background {
+    background-color: yellow;
+}
+
+.list-font {
+    font-size: 30px;
+}
+
+.form-style {
+    background-color: black;
+    color: white;
+}
