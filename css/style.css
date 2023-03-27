@@ -4,8 +4,65 @@ line
 comment
 */
 
-.fancy-header {
-    color: purple; /* single line comment */
+#head {
+    color: white; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+
+body {
+    background-color: grey;
+    background-image: url("/images/pexels-elīna-arāja-3334452.jpg");
+    background-size: 1200px 2200px;
+    color: white;
+}
+
+ul {
+    list-style-type: square;
+}
+
+header, body {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+article {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 30px;
+    font-size: 20px;
+    height: 350px;
+}
+
+th {
+    width: 100px;
+    text-decoration: underline;
+}
+
+a:link {
+    color: blue;
+}
+
+/* unvisited link (:link) */
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:white;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
 }
 
