@@ -23,10 +23,12 @@ ul {
 
 header, body {
     font-family: 'Share Tech Mono', monospace;
+    text-align: center;
 }
 
-article {
-    text-align: center;
+ul, ol {
+    display: inline-block;
+    text-align: left;
 }
 
 table {
@@ -53,7 +55,7 @@ a:link {
 
 /* visited link (:visited) */
 a:visited {
-    color:white;
+    color:darkgrey;
 }
 
 /* mouse hover over link (:hover) */
