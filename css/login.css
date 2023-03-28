@@ -59,8 +59,7 @@ fieldset {
     background-color: #0fb784;
     padding: 8px;
     font-weight: bold;
-    border: 1px;
-    border-color: lightgray;
+    border: 1px lightgray;
 }
 
 .form-control {
@@ -70,11 +69,12 @@ fieldset {
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width: 100%;
+    width: calc(100% - .5em);
     padding-top: 4px;
     padding-bottom: 4px;
     margin-top: .5em;
     margin-bottom: .5em;
+    margin-left: -.5em;
 }
 
 
