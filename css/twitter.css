@@ -106,24 +106,21 @@ a {
 }
 
 .profile-details {
-    display: inline-block;
     float: left;
-    width: 25%;
-    margin: 0 calc(-.5em);
+    width: calc(25% - 1em);
+    margin: 0 .5em;
 }
 
 .timeline {
-    display: inline-block;
-    clear: both;
-    width: 50%;
-    margin: 0 calc(-.5em);
+    float: left;
+    width: calc(50% - 1em);
+    margin: 0 .5em;
 }
 
 .who-to-follow {
-    display: inline-block;
-    float: right;
-    width: 25%;
-    margin: 0 calc(-.5em);
+    float: left;
+    width: calc(25% - 1em);
+    margin: 0 .5em;
 }
 
 .media {
