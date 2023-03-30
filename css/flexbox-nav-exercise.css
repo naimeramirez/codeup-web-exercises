@@ -1,0 +1,17 @@
+div {
+    display: flex;
+    background-color: gray;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.left {
+    justify-content: left;
+}
+
+.right {
+    align-items: flex-end;
+}
