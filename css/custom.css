@@ -1,0 +1,9 @@
+.jumbotron {
+    background-image: url("");
+    height: 346px;
+    background-size: cover;
+}
+
+.bar {
+    background-color: #FFFFFF;
+}
