@@ -56,16 +56,20 @@
 <!--tabs-->
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><span class="badge bg-secondary">1</span> Size and Crust</a>
+            <a class="nav-link active" aria-current="page" href="#size-and-crust"><span class="badge bg-secondary">1</span> Size and Crust</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#"><span class="badge bg-secondary">2</span> Cheese and Sauce</a>
+            <a class="nav-link" href="#cheese-and-sauce"><span class="badge bg-secondary" >2</span> Cheese and Sauce</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#"><span class="badge bg-secondary">3</span> Toppings</a>
+            <a class="nav-link" href="#toppings"><span class="badge bg-secondary">3</span> Toppings</a>
         </li>
     </ul>
-<!--card-->
+
+    <!--cards-->
+
+<!--    size and crust-->
+    <div id="size-and-crust">
     <div class="card">
         <div class="card-header bg-primary text-white">
             Choose Size and Crust
@@ -90,9 +94,11 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
-                    <li class="list-group-item"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <li class="list-group-item">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1">Medium (12")</label></li>
-                    <li class="list-group-item"><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <li class="list-group-item">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1">Large (14")</label></li>
                 </ul>
             </div>
@@ -101,6 +107,140 @@
             <a href="#" class="btn btn-primary">Next Step ></a>
         </div>
     </div>
+    </div>
+
+    <!--    cheese and sauce-->
+    <div id="cheese-and-sauce">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Choose Cheese and Sauce
+        </div>
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header">
+                    Cheese
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">How Much?</li>
+                    <li class="list-group-item">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Normal</option>
+                            <option value="1">Light</option>
+                            <option value="2">Extra</option>
+                            <option value="3">Double</option>
+                        </select>
+                        </li>
+                </ul>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    Sauce
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">What Type?</li>
+                    <li class="list-group-item">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Tomatoe</option>
+                            <option value="1">Marinara</option>
+                            <option value="2">BBQ</option>
+                            <option value="3">Alfredo</option>
+                        </select>
+                    </li>
+                    <li class="list-group-item">How Much?</li>
+                    <li class="list-group-item">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Normal</option>
+                            <option value="1">Light</option>
+                            <option value="2">Extra</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-footer text-end">
+            <a href="#" class="btn btn-primary">Next Step ></a>
+        </div>
+    </div>
+    </div>
+
+    <!--    toppings-->
+    <div id="toppings">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Choose Toppings
+        </div>
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header">
+                    Choose Meats
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            Beef
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            Ham
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            Philly Steak
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            Bacon
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    Choose Non-Meats
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            Green Peppers
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            Mushrooms
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            Onions
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            Jalapeño Peppers
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-footer text-end">
+            <a href="#" class="btn btn-primary">Next Step ></a>
+        </div>
+    </div>
+    </div>
+
 </div>
 </div>
 <br>
