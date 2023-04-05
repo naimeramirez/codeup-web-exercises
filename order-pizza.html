@@ -54,22 +54,22 @@
         <h2>Build your own pizza!</h2>
     </div>
 <!--tabs-->
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#size-and-crust"><span class="badge bg-secondary">1</span> Size and Crust</a>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="size-and-crust-tab" data-bs-toggle="tab" data-bs-target="#size-and-crust" type="button" role="tab" aria-controls="size-and-crust" aria-selected="true" href="#size-and-crust"><span class="badge bg-secondary">1</span> Size and Crust</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#cheese-and-sauce"><span class="badge bg-secondary" >2</span> Cheese and Sauce</a>
+            <a class="nav-link" id="cheese-and-sauce-tab" data-bs-toggle="tab" data-bs-target="#cheese-and-sauce" type="button" role="tab" aria-controls="cheese-and-sauce" aria-selected="false" href="#cheese-and-sauce"><span class="badge bg-secondary" >2</span> Cheese and Sauce</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#toppings"><span class="badge bg-secondary">3</span> Toppings</a>
+            <a class="nav-link" id="toppings-tab" data-bs-toggle="tab" data-bs-target="#toppings" type="button" role="tab" aria-controls="toppings" aria-selected="false" href="#toppings"><span class="badge bg-secondary">3</span> Toppings</a>
         </li>
     </ul>
 
     <!--cards-->
-
+    <div class="tab-content">
 <!--    size and crust-->
-    <div id="size-and-crust">
+    <div class="tab-pane active" id="size-and-crust" role="tabpanel" aria-labelledby="size-and-crust-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
             Choose Size and Crust
@@ -110,7 +110,7 @@
     </div>
 
     <!--    cheese and sauce-->
-    <div id="cheese-and-sauce">
+        <div class="tab-pane" id="cheese-and-sauce" role="tabpanel" aria-labelledby="cheese-and-sauce-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
             Choose Cheese and Sauce
@@ -159,13 +159,16 @@
             </div>
         </div>
         <div class="card-footer text-end">
-            <a href="#" class="btn btn-primary">Next Step ></a>
+            <div class="btn-group btn-group-small" role="group" aria-label="Basic example">
+            <a href="#" class="btn btn-primary">< Previous </a>
+            <a href="#" class="btn btn-primary">Next ></a>
+        </div>
         </div>
     </div>
     </div>
 
     <!--    toppings-->
-    <div id="toppings">
+        <div class="tab-pane" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
             Choose Toppings
@@ -236,11 +239,12 @@
             </div>
         </div>
         <div class="card-footer text-end">
-            <a href="#" class="btn btn-primary">Next Step ></a>
+            <a href="#" class="btn btn-primary">Checkout <i class="bi bi-cart-fill align-top" style="font-size: .91rem""></i></a>
         </div>
     </div>
     </div>
 
+</div>
 </div>
 </div>
 <br>
