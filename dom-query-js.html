@@ -38,7 +38,7 @@
 <hr>
 
 <div class="form-check form-switch">
-    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
     <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode off/on</label>
 </div>
 
@@ -57,10 +57,7 @@
             mainHeader.innerHTML = "JavaScript is Cool";
         };
 
-        btnMainHeader.addEventListener('click', mainHeaderText, {
-            passive: true,
-            once: true,
-        });
+        btnMainHeader.addEventListener('click', mainHeaderText);
 
 
         // TODO: Uncomment the next line and get the sub header element by id
@@ -75,10 +72,7 @@
             subHeader.style.color = 'blue';
         };
 
-        btnSubHeader.addEventListener('click', subHeaderColor, {
-            passive: true,
-            once: true,
-        });
+        btnSubHeader.addEventListener('click', subHeaderColor);
 
         // TODO: Uncomment the next line and get all list items
 
@@ -95,10 +89,7 @@
             }
         };
 
-        btnListItems.addEventListener('click', listItemsColor, {
-            passive: true,
-            once: true,
-        });
+        btnListItems.addEventListener('click', listItemsColor);
 
 
         // TODO: Set text color of li with dbid = 1 to blue
@@ -110,10 +101,7 @@
             listItems[0].style.color = 'blue';
         };
 
-        btn1stListItem.addEventListener('click', listItem1, {
-            passive: true,
-            once: true,
-        });
+        btn1stListItem.addEventListener('click', listItem1);
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
 
@@ -128,20 +116,34 @@
             subParagraphs[0].innerHTML = "Mission Accomplished!";
         }
 
-        btnSubParagraph.addEventListener('click', subParagraphText, {
-            passive: true,
-            once: true,
-        });
+        btnSubParagraph.addEventListener('click', subParagraphText);
 
 
         // notes
 
-
-        // darkButton.addEventListner ( 'toggle',
-        //         function (){
-        //   let bodyDark = document.querySelector('body');
+        // let bodyColor = document.querySelector('body');
+        // console.log(bodyColor);
+        // let darkButton = document.getElementById('flexSwitchCheckChecked')
+        // console.log(darkButton);
         //
-        //         })
+        // function changeDark() {
+        //     bodyColor.style.backgroundColor = 'black';
+        //     bodyColor.style.color = 'white';
+        // }
+        //
+        // function darkOff() {
+        //     darkButton.removeEventListener("click");
+        // }
+        //
+        //
+        // darkButton.addEventListener('click', changeDark);
+        //
+        // let count = 0;
+        //
+        // let clicks = darkButton.addEventListener('click', function () {
+        //     count++;
+        //     return count;
+        // })
 
     })();
 </script>
