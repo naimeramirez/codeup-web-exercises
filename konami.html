@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="js/jquery-3.6.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).keyup(function (event) {
+        console.log(event.keyCode);
+
+        numbersArray.push(event.keyCode);
+        console.log(numbersArray);
+        cheatCode();
+    });
+
+    var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    // console.log(code);
+    var numbersArray = [];
+
+
+    function cheatCode() {
+        if ((numbersArray.join('')) === code.join('')) {
+            alert('You have added 30 lives!');
+        }
+    };
+
+
+</script>
+</body>
+</html>
