@@ -1,0 +1,48 @@
+
+h1 {
+    font-family: KonSystem;
+    color: #FFFFFF;
+    background-color: red;
+    text-align: center;
+    font-size: 50px;
+    width: 300px;
+    padding-top: 5px;
+    border: solid 1px red;
+    margin-bottom: 2em;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body {
+    background-color: black;
+}
+
+.lives {
+    font-family: 'Press Start 2P', cursive;
+    color: #FFFFFF;
+}
+
+ .material-symbols-outlined {
+     font-variation-settings:
+             'FILL' 1,
+             'wght' 400,
+             'GRAD' 0,
+             'opsz' 48
+ }
+
+ .moreLives {
+     padding-left: 20px;
+     font-size: 19px;
+     text-align: end;
+ }

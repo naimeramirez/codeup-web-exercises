@@ -2,9 +2,27 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <link rel="stylesheet" href="css/konami.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>@font-face {  font-family: KonSystem; src: url('notes/KonSystem-YB8j.ttf'); }</style>
 </head>
 <body>
-<h1>Konami Code</h1>
+<div id="header">
+    <h1>KONAMI</h1>
+</div>
+
+<div id="lives" class="lives">
+    <span class="material-symbols-outlined">favorite</span>
+    <span class="moreLives">X 3</span>
+</div>
+
+<div id="start">
+    <h2>START</h2>
+</div>
+
 
 <script src="js/jquery-3.6.4.js"></script>
 <script>
@@ -12,7 +30,6 @@
 
     $(document).keyup(function (event) {
         console.log(event.keyCode);
-
         numbersArray.push(event.keyCode);
         console.log(numbersArray);
         cheatCode();
@@ -26,9 +43,26 @@
     function cheatCode() {
         if ((numbersArray.join('')) === code.join('')) {
             alert('You have added 30 lives!');
+            $('.moreLives').text('X 35');
         }
     };
 
+
+    $('#start').css('cursor', 'pointer');
+    function blinkStart() {
+        $('#start').fadeOut(500);
+        $('#start').fadeIn(500);
+    }
+    setInterval(blinkStart, 1000);
+
+    $('#start').bind('click', function () {
+        gameOver();
+    })
+
+    function gameOver() {
+        $('h2').text('GAME OVER');
+        $('.moreLives').text('X 0');
+    }
 
 </script>
 </body>
