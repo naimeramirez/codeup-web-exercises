@@ -6,64 +6,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>@font-face {  font-family: KonSystem; src: url('notes/KonSystem-YB8j.ttf'); }</style>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <style>@font-face {
+        font-family: KonSystem;
+        src: url('notes/KonSystem-YB8j.ttf');
+    }</style>
 </head>
 <body>
 <div id="header">
     <h1>KONAMI</h1>
 </div>
 
-<div id="lives" class="lives">
-    <span class="material-symbols-outlined">favorite</span>
-    <span class="moreLives">X 3</span>
+<div id="playerImage">
+    <img class="playerImage" src="images/draggle.png">
 </div>
+
+<div id="player" class="player">
+    <p class="moreLives">PLAYER 1</p>
+</div>
+<div class="lives">
+    <img class="heart" src="images/lifeheart.png">
+    <p class="moreLives">X</p>
+    <p id="moreLives"></p>
+</div>
+
 
 <div id="start">
     <h2>START</h2>
 </div>
 
+<audio id="gameSound" preload="auto">
+    <source src="notes/error8bit.wav">
+</audio>
 
 <script src="js/jquery-3.6.4.js"></script>
-<script>
-    "use strict";
-
-    $(document).keyup(function (event) {
-        console.log(event.keyCode);
-        numbersArray.push(event.keyCode);
-        console.log(numbersArray);
-        cheatCode();
-    });
-
-    var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
-    // console.log(code);
-    var numbersArray = [];
-
-
-    function cheatCode() {
-        if ((numbersArray.join('')) === code.join('')) {
-            alert('You have added 30 lives!');
-            $('.moreLives').text('X 35');
-        }
-    };
-
-
-    $('#start').css('cursor', 'pointer');
-    function blinkStart() {
-        $('#start').fadeOut(500);
-        $('#start').fadeIn(500);
-    }
-    setInterval(blinkStart, 1000);
-
-    $('#start').bind('click', function () {
-        gameOver();
-    })
-
-    function gameOver() {
-        $('h2').text('GAME OVER');
-        $('.moreLives').text('X 0');
-    }
-
-</script>
+<script src="js/konami.js"></script>
 </body>
 </html>
