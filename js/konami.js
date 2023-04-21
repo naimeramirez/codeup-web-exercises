@@ -14,6 +14,7 @@
 
     var lives = 3;
     $('#moreLives').text(lives);
+
     function cheatCode() {
         if ((numbersArray.join('')) === code.join('')) {
             alert('Added 30 lives!');
@@ -23,8 +24,7 @@
     };
 
 
-
-    $('#start').css('cursor', 'pointer');
+    $('#start, #player1').css('cursor', 'pointer');
 
     function blinkStart() {
         $('#start').fadeOut(500);
@@ -43,6 +43,18 @@
         audio.play();
     };
 
+    $('#playerImage').bind('click', function () {
+        var src = $('#player1').attr('src');
+        if (src == "images/draggle.png") {
+            $('#player1').attr('src', "images/draggleorange.png");
+        } else if (src == "images/draggleorange.png") {
+            $('#player1').attr('src', "images/draggleblue.png");
+        } else if (src == "images/draggleblue.png") {
+            $('#player1').attr('src', "images/dragglepink.png");
+        } else if (src == "images/dragglepink.png") {
+            $('#player1').attr('src', "images/draggle.png");
+        }
+    });
 
 
 })();
