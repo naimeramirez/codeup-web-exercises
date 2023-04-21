@@ -8,7 +8,6 @@ h1 {
     width: 300px;
     padding-top: 5px;
     border: solid 1px red;
-    margin-bottom: 2em;
 }
 
 h2 {
@@ -57,8 +56,27 @@ body {
 }
 
 #playerImage {
-margin-bottom: 1em;
+height: 0px;
 }
 
+#player1 {
+    position: relative;
+    top: 150px;
+}
 
+#game {
+    height: 200px;
+    margin-bottom: 1em;
+}
+
+.animate {
+    animation: jump 1s infinite;
+}
+
+@keyframes jump {
+    0%{top: 150px;}
+    50%{top: 100px;}
+    /*70%{top: 100px;}*/
+    100%{top: 150px;}
+}
 

@@ -5,12 +5,17 @@
         console.log(event.keyCode);
         numbersArray.push(event.keyCode);
         console.log(numbersArray);
+        if ((numbersArray.join('')) === spaceBar.join('')) {
+            gameOver();
+        } else {
         cheatCode();
+        }
     });
 
     var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
     // console.log(code);
     var numbersArray = [];
+    var spaceBar = [32];
 
     var lives = 3;
     $('#moreLives').text(lives);
@@ -33,7 +38,9 @@
     setInterval(blinkStart, 1000);
 
     $('#start').bind('click', function () {
-        gameOver();
+        jump();
+        $('h2').text('');
+        $('.lives').text('');
     });
 
     function gameOver() {
@@ -41,6 +48,8 @@
         $('#moreLives').text('0');
         var audio = $('#gameSound') [0];
         audio.play();
+        $('#player1').removeClass('animate');
+        numbersArray = [];
     };
 
     $('#playerImage').bind('click', function () {
@@ -55,6 +64,12 @@
             $('#player1').attr('src', "images/draggle.png");
         }
     });
+
+    function jump () {
+            $('#player1').attr('class', 'animate');
+    };
+
+
 
 
 })();
