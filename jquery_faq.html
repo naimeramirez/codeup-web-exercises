@@ -7,19 +7,24 @@
         * {
             text-align: center;
         }
+
         .invisible {
             visibility: hidden;
         }
+
         .highlight {
             background-color: yellow;
         }
+
         dt {
             font-weight: bold;
         }
-        dd{
+
+        dd {
             margin-left: 0;
             margin-bottom: 20px;
         }
+
         dl {
             display: flex;
             flex-direction: column;
@@ -27,54 +32,132 @@
             justify-content: center;
             margin: auto;
         }
+
+        #parks {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin-bottom: 1em;
+        }
     </style>
 </head>
 <body>
+<div id="faq">
+    <h1>10 FAQs about national parks</h1>
 
-<h1>10 FAQs about national parks</h1>
+    <dl>
+        <dt>What Is a National Park?</dt>
+        <dd id="q1" class="invisible">The National Park Service defines “national parks” as follows: “Generally, a
+            national park contains a variety of resources and encompasses large land or water areas to help provide
+            adequate protection of the resources.”
+        </dd>
 
-<dl>
-    <dt>What Is a National Park?</dt>
-    <dd id="q1" class="invisible">The National Park Service defines “national parks” as follows: “Generally, a national park contains a variety of resources and encompasses large land or water areas to help provide adequate protection of the resources.”</dd>
+        <dt>How Many National Parks Are There?</dt>
+        <dd class="invisible">Currently, there are 63 national parks in the United States.</dd>
 
-    <dt>How Many National Parks Are There?</dt>
-    <dd class="invisible">Currently, there are 63 national parks in the United States.</dd>
+        <dt>How Many National Park Service Sites Are There?</dt>
+        <dd class="invisible">National parks are just one of many designations in the National Park System. In total,
+            there are 423 National Park Service units.
+        </dd>
 
-    <dt>How Many National Park Service Sites Are There?</dt>
-    <dd class="invisible">National parks are just one of many designations in the National Park System. In total, there are 423 National Park Service units.</dd>
+        <dt>How Many People Visit America’s National Parks Every Year?</dt>
+        <dd class="invisible">In 2021, the total number of recreation visitors in the entire National Park System was
+            297,115,406. The NPS website has much more information about visitation across the parks.
+        </dd>
 
-    <dt>How Many People Visit America’s National Parks Every Year?</dt>
-    <dd class="invisible">In 2021, the total number of recreation visitors in the entire National Park System was 297,115,406. The NPS website has much more information about visitation across the parks.</dd>
+        <dt>What Is the Most Visited National Park?</dt>
+        <dd class="invisible">The most visited national park is Great Smoky Mountains National Park in North Carolina
+            and Tennessee, which welcomed 14.1 million visitors in 2021.
+        </dd>
 
-    <dt>What Is the Most Visited National Park?</dt>
-    <dd class="invisible">The most visited national park is Great Smoky Mountains National Park in North Carolina and Tennessee, which welcomed 14.1 million visitors in 2021.</dd>
+        <dt>What Is the Least Visited National Park?</dt>
+        <dd class="invisible">The least visited national park is Gates of the Arctic National Park and Preserve in
+            Alaska. No more than 7,362 people journeyed there in 2021.
+        </dd>
 
-    <dt>What Is the Least Visited National Park?</dt>
-    <dd class="invisible">The least visited national park is Gates of the Arctic National Park and Preserve in Alaska. No more than 7,362 people journeyed there in 2021.</dd>
+        <dt>What Is the Oldest National Park?</dt>
+        <dd class="invisible">The first national park ever established in the United States, and the entire world, is
+            Yellowstone National Park. It was created by President Ulysses S. Grant on March 1, 1872.
+        </dd>
 
-    <dt>What Is the Oldest National Park?</dt>
-    <dd class="invisible">The first national park ever established in the United States, and the entire world, is Yellowstone National Park. It was created by President Ulysses S. Grant on March 1, 1872.</dd>
+        <dt>What Is the Youngest National Park?</dt>
+        <dd class="invisible">The latest addition to the impressive collection of American national parks is New River
+            Gorge National Park and Preserve. Located in West Virginia, New River Gorge was redesignated from “national
+            river” to “national park and preserve” in 2021.
+        </dd>
 
-    <dt>What Is the Youngest National Park?</dt>
-    <dd class="invisible">The latest addition to the impressive collection of American national parks is New River Gorge National Park and Preserve. Located in West Virginia, New River Gorge was redesignated from “national river” to “national park and preserve” in 2021.</dd>
+        <dt>What Is the Largest National Park?</dt>
+        <dd class="invisible">The largest national park in America is Wrangell-St. Elias National Park and Preserve in
+            southeastern Alaska. Encompassing 13.2 million acres (20,625 square miles), this enormous park is bigger
+            than Denali, Death Valley, Yellowstone, Grand Canyon, Glacier, Yosemite and Great Smoky Mountains combined.
+        </dd>
 
-    <dt>What Is the Largest National Park?</dt>
-    <dd class="invisible">The largest national park in America is Wrangell-St. Elias National Park and Preserve in southeastern Alaska. Encompassing 13.2 million acres (20,625 square miles), this enormous park is bigger than Denali, Death Valley, Yellowstone, Grand Canyon, Glacier, Yosemite and Great Smoky Mountains combined.</dd>
+        <dt>What Is the Smallest National Park?</dt>
+        <dd class="invisible">The smallest national park in America is Gateway Arch National Park in Missouri. Formerly
+            known as the Jefferson National Expansion Memorial, this iconic park and arch in St. Louis is no bigger than
+            91 acres (0.14 square miles). It is by far the smallest U.S. national park.
+        </dd>
+    </dl>
+</div>
 
-    <dt>What Is the Smallest National Park?</dt>
-    <dd class="invisible">The smallest national park in America is Gateway Arch National Park in Missouri. Formerly known as the Jefferson National Expansion Memorial, this iconic park and arch in St. Louis is no bigger than 91 acres (0.14 square miles). It is by far the smallest U.S. national park.</dd>
-</dl>
+<div id="parks">
+    <div class="each-park">
+        <h3>Great Smoky Mountains National Park</h3>
+        <ul>
+            <li>Smoky Mountains is the most visited national park in the United States!</li>
+            <li>Smoky Mountains are considered the “Salamander Capital of the World.</li>
+            <li>The Smoky Mountains are estimated to be between 200 and 300 million years old, making them one of the
+                oldest
+                mountain ranges on earth!
+            </li>
+            <li>There are more than 800 miles of hiking trails in the national park.</li>
+        </ul>
+    </div>
+    <div class="each-park">
+        <h3>Zion National Park</h3>
+        <ul>
+            <li>Zion is home to the second largest arch in the world.</li>
+            <li>The Zion Canyon was carved over millions of years by the Virgin River and is approximately 2,000 feet
+                deep.
+            </li>
+            <li>Angels Landing in Zion National Park is thought to be one of the scariest hikes in America.</li>
+            <li>The Anasazi were the original occupants of Zion Canyon, a civilisation that thrived around 1,500 B.C..
+            </li>
+        </ul>
+    </div>
+    <div class="each-park">
+        <h3>Yellowstone National Park</h3>
+        <ul>
+            <li>Half the world’s hydrothermal features are found at Yellowstone.</li>
+            <li>One of the world’s largest active volcanoes lies beneath Yellowstone.</li>
+            <li>There are more than 10,000 hydrothermal features in Yellowstone.</li>
+            <li>About 290 waterfalls can be found throughout Yellowstone’s 2.2 million acres.</li>
+        </ul>
+    </div>
+</div>
+<button id="last-li">Last li in each ul</button>
+
 
 <script src="js/jquery-3.6.4.js"></script>
 <script>
     "use strict";
 
-    $(document).ready(function() {
+    $(document).ready(function () {
 
-        $('dt').click(function(e) {
+        $('dt').click(function (e) {
             e.preventDefault();
             $(this).toggleClass('highlight');
             $(this).next().toggleClass('invisible');
+        });
+
+        $('dt').css('cursor', 'pointer');
+
+        $('#last-li').click(function () {
+            $('li:last-child').addClass('highlight');
+        });
+
+        $('h3').each(function () {
+            $(this).click()
+                $('li').first().css('font-weight', 'bold');
         });
 
     });
