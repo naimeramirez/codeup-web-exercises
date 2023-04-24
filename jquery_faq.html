@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <title>Attributes And CSS</title>
     <style>
+        * {
+            text-align: center;
+        }
         .invisible {
             visibility: hidden;
         }
         .highlight {
             background-color: yellow;
+        }
+        dt {
+            font-weight: bold;
+        }
+        dd{
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+        dl {
+            display: flex;
+            flex-direction: column;
+            max-width: 700px;
+            justify-content: center;
+            margin: auto;
         }
     </style>
 </head>
@@ -54,20 +71,11 @@
 
     $(document).ready(function() {
 
-        $('dt').click(function(event) {
-            event.preventDefault();
-            $('dd').toggleClass('invisible');
+        $('dt').click(function(e) {
+            e.preventDefault();
             $(this).toggleClass('highlight');
+            $(this).next().toggleClass('invisible');
         });
-
-        $('dt').hover(
-            function () {
-                $(this).css('color', 'red');
-            },
-            function () {
-                $(this).css('color', 'black')
-            }
-        );
 
     });
 </script>
