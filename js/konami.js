@@ -28,7 +28,6 @@
         }
     };
 
-
     $('#start, #player1').css('cursor', 'pointer');
 
     function blinkStart() {
@@ -38,7 +37,7 @@
     setInterval(blinkStart, 1000);
 
     $('#start').bind('click', function () {
-        jump();
+        $('#player1').attr('class', 'animate');
         $('h2').text('');
         $('.lives').text('');
     });
@@ -64,10 +63,6 @@
             $('#player1').attr('src', "images/draggle.png");
         }
     });
-
-    function jump () {
-            $('#player1').attr('class', 'animate');
-    };
 
 
 
