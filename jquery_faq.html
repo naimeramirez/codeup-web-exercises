@@ -18,7 +18,7 @@
 
 <dl>
     <dt>What Is a National Park?</dt>
-    <dd class="invisible">The National Park Service defines “national parks” as follows: “Generally, a national park contains a variety of resources and encompasses large land or water areas to help provide adequate protection of the resources.”</dd>
+    <dd id="q1" class="invisible">The National Park Service defines “national parks” as follows: “Generally, a national park contains a variety of resources and encompasses large land or water areas to help provide adequate protection of the resources.”</dd>
 
     <dt>How Many National Parks Are There?</dt>
     <dd class="invisible">Currently, there are 63 national parks in the United States.</dd>
@@ -47,6 +47,30 @@
     <dt>What Is the Smallest National Park?</dt>
     <dd class="invisible">The smallest national park in America is Gateway Arch National Park in Missouri. Formerly known as the Jefferson National Expansion Memorial, this iconic park and arch in St. Louis is no bigger than 91 acres (0.14 square miles). It is by far the smallest U.S. national park.</dd>
 </dl>
+
+<script src="js/jquery-3.6.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+
+        $('dt').click(function(event) {
+            event.preventDefault();
+            $('dd').toggleClass('invisible');
+            $(this).toggleClass('highlight');
+        });
+
+        $('dt').hover(
+            function () {
+                $(this).css('color', 'red');
+            },
+            function () {
+                $(this).css('color', 'black')
+            }
+        );
+
+    });
+</script>
 
 </body>
 </html>
