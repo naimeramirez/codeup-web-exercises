@@ -72,9 +72,9 @@
 
                 function renderPost(post) {
                     var html = '<tr>';
-                    html += '<td>' + post.date + '</td>';
-                    html += '<td>' + post.title + '</td>';
-                    html += '<td>' + post.content + '</td>';
+                    html += `<td> ${post.date} </td>`;
+                    html += `<td> ${post.title} </td>`;
+                    html += `<td> ${post.content} </td>`;
                     html += '<td>' + post.categories + '</td>';
                     html += '</tr>';
                     return html;
