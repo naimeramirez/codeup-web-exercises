@@ -38,6 +38,21 @@
             grid-template-columns: auto auto auto;
             margin-bottom: 1em;
         }
+
+        img {
+            height: 200px;
+            width: 300px;
+            border: solid 5px black;
+            margin: 1em auto;
+        }
+
+        #frames {
+            display: flex;
+            justify-content: space-around;
+            margin: 2em auto;
+            width: 1000px;
+
+        }
     </style>
 </head>
 <body>
@@ -136,6 +151,20 @@
 </div>
 <button id="last-li">Last li in each ul</button>
 
+<div id="frames">
+    <div>
+        <img src="images/bison.jpeg">
+        <button id="btn-left">Swap</button>
+    </div>
+    <div>
+        <img src="images/mountain-goat.jpeg">
+        <button id="btn-center">Swap</button>
+    </div>
+    <div>
+        <img src="images/big-horn.jpeg">
+        <button id="btn-right">Swap</button>
+    </div>
+</div>
 
 <script src="js/jquery-3.6.4.js"></script>
 <script>
@@ -151,13 +180,19 @@
 
         $('dt').css('cursor', 'pointer');
 
-        $('#last-li').click(function () {
+        $('#last-li').click(function (e) {
+            e.preventDefault();
             $('li:last-child').addClass('highlight');
         });
 
-        $('h3').each(function () {
-            $(this).click()
-                $('li').first().css('font-weight', 'bold');
+        $('h3').click(function (e) {
+            e.preventDefault();
+            $(this).next().css('font-weight', 'bold');
+        });
+
+        $('li').click(function (e) {
+            e.preventDefault();
+            $(this).first().css('color', 'blue');
         });
 
     });
