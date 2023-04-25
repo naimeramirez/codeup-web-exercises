@@ -39,20 +39,35 @@
             margin-bottom: 1em;
         }
 
-        img {
-            height: 200px;
-            width: 300px;
-            border: solid 5px black;
-            margin: 1em auto;
-        }
-
-        #frames {
+        .frames {
             display: flex;
             justify-content: space-around;
             margin: 2em auto;
             width: 1000px;
 
         }
+
+        .picture-frame {
+        height: 200px;
+        width: 300px;
+        border: solid 5px black;
+        margin: 1em auto;
+            background-size: cover;
+        }
+
+        .img1 {
+            background-image: url("./images/bison.jpeg");
+        }
+
+        .img2 {
+            background-image: url("./images/mountain-goat.jpeg");
+        }
+
+        .img3 {
+            background-image: url("./images/big-horn.jpeg");
+        }
+
+
     </style>
 </head>
 <body>
@@ -151,20 +166,17 @@
 </div>
 <button id="last-li">Last li in each ul</button>
 
-<div id="frames">
-    <div>
-        <img src="images/bison.jpeg">
-        <button id="btn-left">Swap</button>
-    </div>
-    <div>
-        <img src="images/mountain-goat.jpeg">
-        <button id="btn-center">Swap</button>
-    </div>
-    <div>
-        <img src="images/big-horn.jpeg">
-        <button id="btn-right">Swap</button>
-    </div>
+<div class="frames">
+    <div class="img1 picture-frame"></div>
+    <div class="img2 picture-frame"></div>
+    <div class="img3 picture-frame"></div>
 </div>
+<div class="frames">
+    <button id="btn-left">Swap</button>
+    <button id="btn-center">Swap</button>
+    <button id="btn-right">Swap</button>
+</div>
+
 
 <script src="js/jquery-3.6.4.js"></script>
 <script>
@@ -193,6 +205,18 @@
         $('li').click(function (e) {
             e.preventDefault();
             $(this).first().css('color', 'blue');
+        });
+
+        $('.btn-left').click(function (e) {
+            e.preventDefault();
+        });
+
+        $('.btn-center').click(function (e) {
+            e.preventDefault();
+        });
+
+        $('.btn-right').click(function (e) {
+            e.preventDefault();
         });
 
     });
