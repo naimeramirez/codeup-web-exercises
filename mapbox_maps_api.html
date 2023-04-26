@@ -16,18 +16,81 @@
     (function () {
         "use strict";
 
-        mapboxgl.accessToken = 'pk.eyJ1IjoicmFtaXJlejYyNDYzIiwiYSI6ImNsZ3k0NmZ4NDA1bnczbHB1a2RlNTliMGkifQ.XUjmuewiiQHqs7wtXbUctA';
+        var accessToken = 'pk.eyJ1IjoicmFtaXJlejYyNDYzIiwiYSI6ImNsZ3k0NmZ4NDA1bnczbHB1a2RlNTliMGkifQ.XUjmuewiiQHqs7wtXbUctA';
+
+        mapboxgl.accessToken = accessToken;
         const map = new mapboxgl.Map({
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/streets-v12', // style URL
-            center: [-106.0673, 31.5615], // starting position [lng, lat]
+            center: [-106.2772, 31.7031], // starting position [lng, lat]
             zoom: 10, // starting zoom
         });
 
+        // // Create a new marker.
+        // // Cattleman's 31.561923991963774, -106.0672198750903
+        // const cattlemansMarker = new mapboxgl.Marker()
+        //     .setLngLat([-106.0672, 31.5619])
+        //     .addTo(map);
+        //
+        // // Create a new popup.
+        // var cattlemansPopup = new mapboxgl.Popup()
+        //     .setHTML("<p>Cattleman's Steakhouse at Indian Cliffs Ranch</p>");
+        //
+        // cattlemansMarker.setPopup(cattlemansPopup);
+        //
+        // // Dragonfly 31.825706921905375, -106.52363898417545
+        // const sushiMarker = new mapboxgl.Marker()
+        //     .setLngLat([-106.5236, 31.8257])
+        //     .addTo(map);
+        //
+        // var sushiPopup = new mapboxgl.Popup()
+        //     .setHTML("<p>Dragonfly Wine & Sushi Bistro</p>");
+        //
+        // sushiMarker.setPopup(sushiPopup);
+        //
+        // // BJ's 31.724333673760658, -106.30739829839705
+        // const bjsMarker = new mapboxgl.Marker()
+        //     .setLngLat([-106.3073, 31.7243])
+        //     .addTo(map);
+        //
+        // var bjsPopup = new mapboxgl.Popup()
+        //     .setHTML("<p>BJ's Restaurant & Brewhouse</p>");
+        //
+        // bjsMarker.setPopup(bjsPopup);
+
+        var restaurants = [
+            {
+                "name": "Cattleman's Steakhouse at Indian Cliffs Ranch",
+                "address": "3450 S Fabens Carlsbad Rd, Fabens, TX 79838",
+                "price": "$$",
+                "cords": [-106.0672, 31.5619]
+            }, {
+                "name": "Dragonfly Wine & Sushi Bistro",
+                "address": "5860 N Mesa St Ste.133-135, El Paso, TX 79912",
+                "price": "$$$",
+                "cords": [-106.5236, 31.8257]
+            }, {
+                "name": "BJ's Restaurant & Brewhouse",
+                "address": "11905 Gateway Blvd W, El Paso, TX 79936",
+                "price": "$",
+                "cords": [-106.3073, 31.7243]
+            }
+        ];
+
+        restaurants.forEach(function (restaurant) {
+            console.log(restaurant);
+
         // Create a new marker.
         const marker = new mapboxgl.Marker()
-            .setLngLat([-106.067339, 31.561597])
+            .setLngLat(restaurant.cords)
             .addTo(map);
+
+        // Create a new popup.
+        var popup = new mapboxgl.Popup()
+            .setHTML(`<p> ${restaurant.name} </p><p>${restaurant.address}</p><p>${restaurant.price}</p>`);
+
+        marker.setPopup(popup);
+        });
 
     })();
 </script>
