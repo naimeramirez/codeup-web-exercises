@@ -12,13 +12,13 @@
 
 <div id='map' style='width: 99vw; height: 98vh;'></div>
 
+<script src="js/jquery-3.6.4.js"></script>
+<script src="js/keys.js"></script>
 <script>
     (function () {
         "use strict";
 
-        var accessToken = 'pk.eyJ1IjoicmFtaXJlejYyNDYzIiwiYSI6ImNsZ3k0NmZ4NDA1bnczbHB1a2RlNTliMGkifQ.XUjmuewiiQHqs7wtXbUctA';
-
-        mapboxgl.accessToken = accessToken;
+        mapboxgl.accessToken = MAPBOX_KEY;
         const map = new mapboxgl.Map({
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/streets-v12', // style URL
@@ -84,16 +84,16 @@
         restaurants.forEach(function (restaurant) {
             console.log(restaurant);
 
-        // Create a new marker.
-        const marker = new mapboxgl.Marker()
-            .setLngLat(restaurant.cords)
-            .addTo(map);
+            // Create a new marker.
+            const marker = new mapboxgl.Marker()
+                .setLngLat(restaurant.cords)
+                .addTo(map);
 
-        // Create a new popup.
-        var popup = new mapboxgl.Popup()
-            .setHTML(`<p> ${restaurant.name} </p><p>${restaurant.address}</p><p>${restaurant.price}</p>`);
+            // Create a new popup.
+            var popup = new mapboxgl.Popup()
+                .setHTML(`<p> ${restaurant.name} </p><p>${restaurant.address}</p><p>${restaurant.price}</p>`);
 
-        marker.setPopup(popup);
+            marker.setPopup(popup);
         });
 
     })();

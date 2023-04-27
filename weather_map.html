@@ -5,6 +5,15 @@
     <title>Weather Map</title>
 </head>
 <body>
-
+<script src="js/jquery-3.6.4.js"></script>
+<script src="js/keys.js"></script>
+<script>
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: OPEN_WEATHER_APPID,
+        q: "San Antonio, US"
+    }).done(function (weatherForecast) {
+        console.log(weatherForecast);
+    })
+</script>
 </body>
 </html>
