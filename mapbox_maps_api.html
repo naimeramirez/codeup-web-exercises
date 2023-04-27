@@ -26,6 +26,10 @@
             zoom: 10, // starting zoom
         });
 
+        // Add zoom and rotation controls to the map.
+        map.addControl(new mapboxgl.NavigationControl());
+
+
         // // Create a new marker.
         // // Cattleman's 31.561923991963774, -106.0672198750903
         // const cattlemansMarker = new mapboxgl.Marker()
