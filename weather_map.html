@@ -19,29 +19,28 @@
         </form>
     </div>
 </nav>
-
-<!--current weather-->
+<!--weather cards-->
 <div class="card text-center">
+    <!--current weather-->
     <h4 id="currentCity" class="card-header"></h4>
     <div class="card-body">
         <h5 id="currentTemp" class="card-title"></h5>
         <p id="currentWeatherIcon" class="card-text"></p>
-        <p id="currentWeather" class="card-text"></p>
+        <p id="currentWeather" class="card-text fw-bold"></p>
         <p id="currentHumidity" class="card-text"></p>
         <p id="currentWind" class="card-text"></p>
         <p id="currentPressure" class="card-text"></p>
     </div>
-
     <!--4 day forecast    -->
     <div id="forecastCards" class="row"></div>
 </div>
-    <!--map-->
-    <div id='map'></div>
+<!--map-->
+<div id='map'></div>
 
 
-    <script src="js/jquery-3.6.4.js"></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
-    <script src="js/keys.js"></script>
-    <script src="js/weather_map.js"></script>
+<script src="js/jquery-3.6.4.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/weather_map.js"></script>
 </body>
 </html>
