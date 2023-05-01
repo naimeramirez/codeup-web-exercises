@@ -1,22 +1,29 @@
 (function () {
     "use strict";
-//El Paso, TX 31.76550444474006, -106.4925112493456
+    //El Paso, TX 31.76165, -106.48552
+    var elPaso = {
+        lon: -106.48552,
+        lat: 31.76165
+    };
 
 // current weather
-    $.get("https://api.openweathermap.org/data/2.5/weather", {
-        APPID: OPEN_WEATHER_APPID,
-        q: "El Paso, US",
-        units: "imperial"
-    }).done(function (weather) {
-        // console.log(weather);
-        $('#currentCity').html(`${weather.name}`);
-        $('#currentTemp').html(`Current Temperature: ${weather.main.temp.toString().slice(0, 2)}°F`);
-        $('#currentWeatherIcon').html(`<img src="http://openweathermap.org/img/w/${weather.weather[0].icon}.png">`);
-        $('#currentWeather').html(`${weather.weather[0].description}`);
-        $('#currentHumidity').html(`Humidity: ${weather.main.humidity}%`);
-        $('#currentWind').html(`Wind: ${weather.wind.speed} mph`);
-        $('#currentPressure').html(`Pressure: ${weather.main.pressure} hPa`);
-    });
+    function currentWeather(lat, lon) {
+        $.get("https://api.openweathermap.org/data/2.5/weather", {
+            APPID: OPEN_WEATHER_APPID,
+            lat: lat,
+            lon: lon,
+            units: "imperial"
+        }).done(function (weather) {
+            // console.log(weather);
+            $('#currentCity').html(`${weather.name}`);
+            $('#currentTemp').html(`Current Temperature: ${weather.main.temp.toString().slice(0, 2)}°F`);
+            $('#currentWeatherIcon').html(`<img src="http://openweathermap.org/img/w/${weather.weather[0].icon}.png">`);
+            $('#currentWeather').html(`${weather.weather[0].description}`);
+            $('#currentHumidity').html(`Humidity: ${weather.main.humidity}%`);
+            $('#currentWind').html(`Wind: ${weather.wind.speed} mph`);
+            $('#currentPressure').html(`Pressure: ${weather.main.pressure} hPa`);
+        });
+    }
 
 //5 day forecast
     function forecastDay(day) {
@@ -60,9 +67,43 @@
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
-        center: [-106.2772, 31.7031], // starting position [lng, lat]
+        center: [-106.48, 31.76], // starting position [lng, lat]
         zoom: 10, // starting zoom
     });
+// draggable marker
+    const marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat(elPaso)
+        .addTo(map);
+
+    function onDragEnd() {
+        const lngLat = marker.getLngLat();
+        $('#coordinates').css('display', 'block');
+        $('#coordinates').html(`Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`);
+        var longitude = lngLat.lng;
+        var latitude = lngLat.lat;
+        return longitude, latitude;
+    }
+
+    marker.on('dragend', onDragEnd);
+
+    map.addControl(new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        })
+    );
     map.addControl(new mapboxgl.NavigationControl());
+    map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        trackUserLocation: true,
+        showUserHeading: true
+    }));
+
+
+    currentWeather(elPaso.lat, elPaso.lon);
+
 
 })();

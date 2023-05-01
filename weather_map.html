@@ -7,15 +7,18 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="css/weather_map.css">
+    <link rel="stylesheet"
+          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+          type="text/css">
 </head>
 <body>
 <!--Nav Bar-->
 <nav class="navbar navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand">Weather App</a>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="El Paso, TX" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
+<!--        <form class="d-flex">-->
+<!--            <input  class="form-control me-2" type="search" placeholder="El Paso, TX" aria-label="Search">-->
+<!--            <button class="btn btn-outline-light" type="submit">Search</button>-->
         </form>
     </div>
 </nav>
@@ -34,13 +37,18 @@
     <!--4 day forecast    -->
     <div id="forecastCards" class="row"></div>
 </div>
-<!--map-->
-<div id='map'></div>
 
+<!--map-->
+<div id="mapContainer">
+    <div id='map'></div>
+    <pre id="coordinates" class="coordinates"></pre>
+</div>
 
 <script src="js/jquery-3.6.4.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
 <script src="js/weather_map.js"></script>
+
 </body>
 </html>
