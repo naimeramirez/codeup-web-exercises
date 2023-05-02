@@ -50,5 +50,12 @@ p {
 }
 
 #forecast-cards {
+    display: flex;
+    justify-content: space-evenly;
     opacity: 0.7;
+}
+
+@media (max-width: 750px) {
+    #background-video {display: none}
+    #forecast-cards {display: block; width: auto}
 }

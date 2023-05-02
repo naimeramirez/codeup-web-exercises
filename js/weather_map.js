@@ -27,8 +27,7 @@
 
 //5 day forecast
     function forecastDay(day) {
-        var html = `<div class="col">`;
-        html += `<div class="card">`;
+        var html = `<div class="card">`;
         html += `<div class="card-header">${day.dt_txt.slice(0, 10)}</div>`;
         html += `<div class="card-body">`;
         html += `<p class="card-title fw-bold">${day.main.temp_min.toString().slice(0, 2)}°F / ${day.main.temp_max.toString().slice(0, 2)}°F</p>`;
@@ -37,7 +36,6 @@
         html += `<p class="card-text">Humidity: ${day.main.humidity}%</p>`;
         html += `<p class="card-text">Wind: ${day.wind.speed} mph</p>`;
         html += `<p class="card-text">Pressure: ${day.main.pressure} hPa</p>`;
-        html += `</div>`;
         html += `</div>`;
         html += `</div>`;
         return html;
@@ -84,16 +82,6 @@
         draggable: true
     })
 
-    function setMarker(cords) {
-        marker.setLngLat(cords)
-        marker.addTo(map);
-        map.flyTo({
-            center: cords,
-            zoom: 15,
-            essential: true
-        })
-    }
-
     function onDragEnd() {
         const lngLat = marker.getLngLat();
         callWeather(lngLat.lng, lngLat.lat);
@@ -106,6 +94,17 @@
 
     marker.on('dragend', onDragEnd);
 
+// click marker
+    function setMarker(cords) {
+        marker.setLngLat(cords)
+        marker.addTo(map);
+        map.flyTo({
+            center: cords,
+            zoom: 15,
+            essential: true
+        })
+    }
+
     map.on('click', function (event) {
         var clickInfo = {
             lng: event.lngLat.lng,
@@ -115,13 +114,13 @@
         setMarker(clickInfo);
     });
 
-    // city search
+// text search
     var geocoder = new MapboxGeocoder({
         accessToken: MAPBOX_KEY,
         placeholder: "El Paso, TX",
         mapboxgl: mapboxgl
     })
-    // map.addControl(geocoder);
+    // map.addControl(geocoder); //adds input box to map
     geocoder.addTo('#geocoder-container');
 
     function searchSelect(result) {
@@ -137,15 +136,15 @@
 
     geocoder.on('result', searchSelect);
 
-    // navigation controls
+// navigation controls
     map.addControl(new mapboxgl.NavigationControl());
-    map.addControl(new mapboxgl.GeolocateControl({
-        positionOptions: {
-            enableHighAccuracy: true
-        },
-        trackUserLocation: true,
-        showUserHeading: true
-    }));
+    // map.addControl(new mapboxgl.GeolocateControl({
+    //     positionOptions: {
+    //         enableHighAccuracy: true
+    //     },
+    //     trackUserLocation: true,
+    //     showUserHeading: true
+    // }));
 
 // first call from El Paso
     callWeather(elPaso.lng, elPaso.lat);
