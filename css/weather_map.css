@@ -46,6 +46,7 @@ p {
     height: 100vh;
     width: 100vw;
     z-index: -1;
+    opacity: 0.8;
 }
 
 #forecast-cards {
