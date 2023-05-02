@@ -16,30 +16,30 @@
 <nav class="navbar navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand">Weather App</a>
-<!--        <form class="d-flex">-->
+        <form id="geocoder-container" class="d-flex">
 <!--            <input  class="form-control me-2" type="search" placeholder="El Paso, TX" aria-label="Search">-->
-<!--            <button class="btn btn-outline-light" type="submit">Search</button>-->
+<!--            <button id="find" class="btn btn-outline-light" type="submit">Search</button>-->
         </form>
     </div>
 </nav>
 <!--weather cards-->
 <div class="card text-center">
     <!--current weather-->
-    <h4 id="currentCity" class="card-header"></h4>
+    <h4 id="current-city" class="card-header"></h4>
     <div class="card-body">
-        <h5 id="currentTemp" class="card-title"></h5>
-        <p id="currentWeatherIcon" class="card-text"></p>
-        <p id="currentWeather" class="card-text fw-bold"></p>
-        <p id="currentHumidity" class="card-text"></p>
-        <p id="currentWind" class="card-text"></p>
-        <p id="currentPressure" class="card-text"></p>
+        <h5 id="current-temp" class="card-title"></h5>
+        <p id="current-icon" class="card-text"></p>
+        <p id="current-weather" class="card-text fw-bold"></p>
+        <p id="current-humidity" class="card-text"></p>
+        <p id="current-wind" class="card-text"></p>
+        <p id="current-pressure" class="card-text"></p>
     </div>
     <!--4 day forecast    -->
-    <div id="forecastCards" class="row"></div>
+    <div id="forecast-cards" class="row"></div>
 </div>
 
 <!--map-->
-<div id="mapContainer">
+<div id="map-container">
     <div id='map'></div>
     <pre id="coordinates" class="coordinates"></pre>
 </div>
