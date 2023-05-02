@@ -65,6 +65,11 @@
         })
     }
 
+    function callWeather(lng, lat) {
+        currentWeather(lng, lat);
+        forecastWeather(lng, lat);
+    }
+
 // mapbox
     mapboxgl.accessToken = MAPBOX_KEY;
     const map = new mapboxgl.Map({
@@ -91,8 +96,7 @@
 
     function onDragEnd() {
         const lngLat = marker.getLngLat();
-        currentWeather(lngLat.lng, lngLat.lat);
-        forecastWeather(lngLat.lng, lngLat.lat);
+        callWeather(lngLat.lng, lngLat.lat);
         map.flyTo({
             center: lngLat,
             zoom: 15,
@@ -105,8 +109,9 @@
     map.on('click', function (event) {
         var clickInfo = {
             lng: event.lngLat.lng,
-            lat:event.lngLat.lat
+            lat: event.lngLat.lat
         }
+        callWeather(clickInfo.lng, clickInfo.lat);
         setMarker(clickInfo);
     });
 
@@ -126,8 +131,7 @@
             lng: result.result.center[0],
             lat: result.result.center[1]
         }
-        currentWeather(cityInfo.lng, cityInfo.lat);
-        forecastWeather(cityInfo.lng, cityInfo.lat);
+        callWeather(cityInfo.lng, cityInfo.lat);
         setMarker(cityInfo);
     }
 
@@ -144,7 +148,6 @@
     }));
 
 // first call from El Paso
-    currentWeather(elPaso.lng, elPaso.lat);
-    forecastWeather(elPaso.lng, elPaso.lat);
+    callWeather(elPaso.lng, elPaso.lat);
     setMarker(elPaso);
 })();
