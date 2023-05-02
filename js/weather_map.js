@@ -102,8 +102,15 @@
 
     marker.on('dragend', onDragEnd);
 
-    // city search
+    map.on('click', function (event) {
+        var clickInfo = {
+            lng: event.lngLat.lng,
+            lat:event.lngLat.lat
+        }
+        setMarker(clickInfo);
+    });
 
+    // city search
     var geocoder = new MapboxGeocoder({
         accessToken: MAPBOX_KEY,
         placeholder: "El Paso, TX",
@@ -118,7 +125,7 @@
         var cityInfo = {
             lng: result.result.center[0],
             lat: result.result.center[1]
-        };
+        }
         currentWeather(cityInfo.lng, cityInfo.lat);
         forecastWeather(cityInfo.lng, cityInfo.lat);
         setMarker(cityInfo);
