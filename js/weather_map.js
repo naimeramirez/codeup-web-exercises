@@ -1,23 +1,23 @@
 (function () {
     "use strict";
 // change video
-    // function backgroundVideo(tempBackground){
-    //     if (tempBackground < 298) {
-    //         $('#background-video').attr('src','images/thunder.mp4');
-    //     } else if (tempBackground > 299 && tempBackground < 598) {
-    //         $('#background-video').attr('src','images/rain.mp4');
-    //     } else if (tempBackground > 599 && tempBackground < 698) {
-    //         $('#background-video').attr('src','images/snow.mp4');
-    //     } else if (tempBackground > 699 && tempBackground < 799) {
-    //         $('#background-video').attr('src','images/atmosphere.mp4');
-    //     } else if (tempBackground > 800 && tempBackground < 805) {
-    //         $('#background-video').attr('src','images/clouds.mp4');
-    //     } else if (tempBackground === 800) {
-    //         $('#background-video').attr('src','images/clear.mp4');
-    //     } else {
-    //         $('#background-video').attr('');
-    //     }
-    // }
+//     function backgroundVideo(tempBackground){
+//         if (tempBackground < 298) {
+//             $('#background-video').attr('src','images/thunder.mp4');
+//         } else if (tempBackground > 299 && tempBackground < 598) {
+//             $('#background-video').attr('src','images/rain.mp4');
+//         } else if (tempBackground > 599 && tempBackground < 698) {
+//             $('#background-video').attr('src','images/snow.mp4');
+//         } else if (tempBackground > 699 && tempBackground < 799) {
+//             $('#background-video').attr('src','images/atmosphere.mp4');
+//         } else if (tempBackground > 800 && tempBackground < 805) {
+//             $('#background-video').attr('src','images/clouds.mp4');
+//         } else if (tempBackground === 800) {
+//             $('#background-video').attr('src','images/clear.mp4');
+//         } else {
+//             $('#background-video').attr('');
+//         }
+//     }
 
 // current weather
     function currentWeather(lng, lat) {
