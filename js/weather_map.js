@@ -1,23 +1,23 @@
 (function () {
     "use strict";
 // change video
-//     function backgroundVideo(tempBackground){
-//         if (tempBackground < 298) {
-//             $('#background-video').attr('src','images/thunder.mp4');
-//         } else if (tempBackground > 299 && tempBackground < 598) {
-//             $('#background-video').attr('src','images/rain.mp4');
-//         } else if (tempBackground > 599 && tempBackground < 698) {
-//             $('#background-video').attr('src','images/snow.mp4');
-//         } else if (tempBackground > 699 && tempBackground < 799) {
-//             $('#background-video').attr('src','images/atmosphere.mp4');
-//         } else if (tempBackground > 800 && tempBackground < 805) {
-//             $('#background-video').attr('src','images/clouds.mp4');
-//         } else if (tempBackground === 800) {
-//             $('#background-video').attr('src','images/clear.mp4');
-//         } else {
-//             $('#background-video').attr('');
-//         }
-//     }
+    function backgroundVideo(tempID){
+        if (tempID < 298) {
+            $('#background-video').attr('src','images/thunder.mp4');
+        } else if (tempID > 299 && tempID < 598) {
+            $('#background-video').attr('src','images/rain.mp4');
+        } else if (tempID > 599 && tempID < 698) {
+            $('#background-video').attr('src','images/snow.mp4');
+        } else if (tempID > 699 && tempID < 799) {
+            $('#background-video').attr('src','images/atmosphere.mp4');
+        } else if (tempID > 800 && tempID < 805) {
+            $('#background-video').attr('src','images/clouds.mp4');
+        } else if (tempID === 800) {
+            $('#background-video').attr('src','images/clear.mp4');
+        } else {
+            $('#background-video').attr('');
+        }
+    }
 
 // current weather
     function currentWeather(lng, lat) {
@@ -27,7 +27,7 @@
             lon: lng,
             units: "imperial"
         }).done(function (weather) {
-            // console.log(weather);
+            console.log(weather);
             $('#current-city').html(`${weather.name}`);
             $('#current-temp').html(`Current Temperature: ${weather.main.temp.toString().slice(0, 2)}°F`);
             $('#current-icon').html(`<img src="http://openweathermap.org/img/w/${weather.weather[0].icon}.png">`);
@@ -35,6 +35,10 @@
             $('#current-humidity').html(`Humidity: ${weather.main.humidity}%`);
             $('#current-wind').html(`Wind: ${weather.wind.speed} mph`);
             $('#current-pressure').html(`Pressure: ${weather.main.pressure} hPa`);
+
+            var tempID = weather.weather[0].id;
+            console.log(tempID);
+            backgroundVideo(tempID);
         });
     }
 
