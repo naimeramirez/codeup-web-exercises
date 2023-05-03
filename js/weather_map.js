@@ -1,10 +1,5 @@
 (function () {
     "use strict";
-    //El Paso, TX 31.76165, -106.48552
-    var elPaso = {
-        lng: -106.48552,
-        lat: 31.76165
-    };
 
 // current weather
     function currentWeather(lng, lat) {
@@ -114,7 +109,7 @@
         setMarker(clickInfo);
     });
 
-// text search
+// search box
     var geocoder = new MapboxGeocoder({
         accessToken: MAPBOX_KEY,
         placeholder: "El Paso, TX",
@@ -147,6 +142,12 @@
     // }));
 
 // first call from El Paso
+    //El Paso, TX 31.76165, -106.48552
+    var elPaso = {
+        lng: -106.48552,
+        lat: 31.76165
+    };
+
     callWeather(elPaso.lng, elPaso.lat);
     setMarker(elPaso);
 })();
